@@ -16,29 +16,36 @@ $(function () {
             $('.ss-menu5').removeClass('visible5');
         }
     })
+    // 🔥 Set default state as active
+    $('.menu').addClass('active');
+    $('.ss-menu1').addClass('visible1');
+    $('.ss-menu2').addClass('visible2');
+    $('.ss-menu3').addClass('visible3');
+    $('.ss-menu4').addClass('visible4');
+    $('.ss-menu5').addClass('visible5');
 })
-$(function () {
-    $('.ss-menu').on('click', function () {
-      $('.menu').removeClass('active');
-      $('.ss-menu1').removeClass('visible1');
-      $('.ss-menu2').removeClass('visible2');
-      $('.ss-menu3').removeClass('visible3');
-      $('.ss-menu4').removeClass('visible4');
-      $('.ss-menu5').removeClass('visible5');
-    })
-})
-$(function () {
-    $(window).on('scroll', function () {
-        if ($('.menu').hasClass('active')) {
-          $('.menu').removeClass('active');
-          $('.ss-menu1').removeClass('visible1');
-          $('.ss-menu2').removeClass('visible2');
-          $('.ss-menu3').removeClass('visible3');
-          $('.ss-menu4').removeClass('visible4');
-          $('.ss-menu5').removeClass('visible5');
-        }
-    })
-})
+// $(function () {
+//     $('.ss-menu').on('click', function () {
+//       $('.menu').removeClass('active');
+//       $('.ss-menu1').removeClass('visible1');
+//       $('.ss-menu2').removeClass('visible2');
+//       $('.ss-menu3').removeClass('visible3');
+//       $('.ss-menu4').removeClass('visible4');
+//       $('.ss-menu5').removeClass('visible5');
+//     })
+// })
+// $(function () {
+//     $(window).on('scroll', function () {
+//         if ($('.menu').hasClass('active')) {
+//           $('.menu').removeClass('active');
+//           $('.ss-menu1').removeClass('visible1');
+//           $('.ss-menu2').removeClass('visible2');
+//           $('.ss-menu3').removeClass('visible3');
+//           $('.ss-menu4').removeClass('visible4');
+//           $('.ss-menu5').removeClass('visible5');
+//         }
+//     })
+// })
 
 // Parallax effect and gsap
 $(function () {
@@ -52,8 +59,8 @@ $(function () {
 // Listener pour chargement adresse mailto
 window.addEventListener("load", function () {
   if (document.getElementById('insertMail')) {
-    let name = "jerome.bombal" ; // Update yours informations here
-    let domain = "free.fr" ; // Update yours informations here
+    let name = "jerome.bombal" ; // Update your informations here
+    let domain = "free.fr" ; // Update your informations here
     //let subject = "subject=Formulaire Tuco" ;
     let divMail = document.getElementById('insertMail');
     let newAhref = document.createElement('a');
