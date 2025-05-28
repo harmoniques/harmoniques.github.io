@@ -313,16 +313,16 @@ $(function () {
 
 // Locations
 $(function () {
-    $(".card").on('click', () => {window.location.href = "https://www.instagram.com/"});
+    $(".card").on('click', () => {window.location.href = "https://www.instagram.com/jay.musique/"});
 })
 // Location socials
 $(function () {
     $('.facebook').on('click', function(event) {
       event.preventDefault();
-      window.location.href = "https://facebook.com/";
+      window.location.href = "https://facebook.com/JayLiveGuitar";
     });
     $('.instagram').on('click', function(event) {
       event.preventDefault();
-      window.location.href = "https://www.instagram.com/";
+      window.location.href = "https://www.instagram.com/jay.musique/";
     });
 })
