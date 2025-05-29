@@ -61,11 +61,11 @@ window.addEventListener("load", function () {
   if (document.getElementById('insertMail')) {
     let name = "jerome.bombal" ; // Update your informations here
     let domain = "free.fr" ; // Update your informations here
-    //let subject = "subject=Formulaire Tuco" ;
+    let subject = "subject=Demande de renseignements" ;
     let divMail = document.getElementById('insertMail');
     let newAhref = document.createElement('a');
     newAhref.href = "mailto:" + name + '@' + domain;
-    newAhref.innerHTML = name + '@' + domain;
+    // newAhref.innerHTML = name + '@' + domain;
     divMail.appendChild(newAhref);
   }
 })
