@@ -17,11 +17,11 @@
 				$objet = "Message de Hot Coffee Jazz"; // input your domain name here
 
 				// Headers
-	      $headers = array(
-	                      'Content-type' => 'text/html',
-	                      'From' => 'jerome.bombal@free.fr', // input your email from here
-	                      'X-Mailer' => 'PHP/' . phpversion()
-	                  );
+	            $headers = array(
+                    'Content-type' => 'text/html',
+                    'From' => 'jerome.bombal@free.fr', // input your email from here
+                    'X-Mailer' => 'PHP/' . phpversion()
+                );
 
 				// Send the message then return data to current page with ajax
 				if ($checkRobot == 7) {

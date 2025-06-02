@@ -1,5 +1,8 @@
 		<?php
-				$nom = strip_tags($_POST['nom']);
+                file_put_contents("log.txt", "PHP script hit\n", FILE_APPEND);
+				echo "<p class=\"hardLight\">sendFormContact entered...</p>";
+                
+                $nom = strip_tags($_POST['nom']);
 				$telephone = strip_tags($_POST['telephone']);
 				$mail = strip_tags($_POST['mail']);
 				$message = strip_tags($_POST['message']);
@@ -24,11 +27,11 @@
 				$objet = "Message de Hot Coffee Jazz"; // input your domain name here
 
 				// Headers
-	      $headers = array(
-	                      'Content-type' => 'text/html',
-	                      'From' => 'jerome.bombal@free.fr', // input your email from here
-	                      'X-Mailer' => 'PHP/' . phpversion()
-	                  );
+	            $headers = array(
+                    'Content-type' => 'text/html',
+                    'From' => 'jerome.bombal@free.fr', // input your email from here
+                    'X-Mailer' => 'PHP/' . phpversion()
+                );
 
 				// Send the message then return data to current page with ajax
 				if ($checkRobot == 7) {
