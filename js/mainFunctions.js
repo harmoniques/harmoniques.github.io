@@ -61,7 +61,7 @@ window.addEventListener("load", function () {
   if (document.getElementById('insertMail')) {
     let name = "jerome.bombal" ; // Update your informations here
     let domain = "free.fr" ; // Update your informations here
-    let subject = "subject=Demande de renseignements" ;
+    let subject = "Demande de renseignements" ;
     let divMail = document.getElementById('insertMail');
     let newAhref = document.createElement('a');
     newAhref.href = "mailto:" + name + '@' + domain;
@@ -115,7 +115,7 @@ $(function () {
     // Check Robot
         $('#checkRobot').on('blur input', function () {
             if ($('#checkRobot').val() != 7) {
-              $('#helpRobot').text('Incorrect result of the operation').hide().show();
+              $('#helpRobot').text('Incorrect operation result').hide().show();
             } else {
               $('#helpRobot').slideUp(400);
             }
@@ -134,6 +134,7 @@ $(function () {
 $(function () {
       $('.contactForm').on('submit', function (e) {
           e.preventDefault();
+        //   alert('contactForm submitted!');
           let nom = $('#nom').val();
           let telephone = $('#telephone').val();
           let mail = $('#mail').val();
@@ -141,6 +142,7 @@ $(function () {
           let newsletter = $('input[name="newsletter"]:checked').val();
           let checkRobot = $('#checkRobot').val();
           if ($('#checkRobot').val() == 7) {
+            //   alert('contactForm pre-post!');
               $.post('../datas/sendFormContact.php',
                       {nom: nom,
                         telephone: telephone,
@@ -167,9 +169,9 @@ $(function () {
                             $('#checkRobot').val('');
                           });
             } else {
-                alert('Incorrect anti-robot check result !');
+                alert('Incorrect anti-robot check result!');
             }
-
+        alert('contactForm post done!');
       })
 })
 
