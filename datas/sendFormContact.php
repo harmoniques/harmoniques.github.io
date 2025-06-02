@@ -7,21 +7,21 @@
 				$newsletter = strip_tags($_POST['newsletter']);
 
 				// text to send
-				$texte = "Hi there,<br /><br />";
-				$texte = $texte . "Message from < yoursitename >.<br />";
-				$texte = $texte . "The elements entered in the form are as follows :<br />";
-				$texte = $texte . "Name : $nom<br />";
-				$texte = $texte . "Phone number : $telephone<br />";
+				$texte = "Bonjour,<br /><br />";
+				$texte = $texte . "Message de Hot Coffee Jazz<br />";
+				$texte = $texte . "Vous avez indiqué :<br />";
+				$texte = $texte . "Nom : $nom<br />";
+				$texte = $texte . "Téléphone : $telephone<br />";
 				$texte = $texte . "Email :  $mail<br /><br />";
 				$texte = $texte . "Message : $message<br /><br />";
-				$texte = $texte . "Newsletter subscription : $newsletter<br /><br />";
-				$texte = $texte . "This is an automatic message, do not reply to it.";
+				$texte = $texte . "Souscription Newsletter : $newsletter<br /><br />";
+				$texte = $texte . "Message automatique, merci de ne pas y répondre...";
 
 				$texte = stripslashes($texte);
 
 				// Recipient and subject of the message
-				$destinataire = "contact@gmail.com"; // input your email here
-				$objet = "Message from your < site name >"; // input your domain name here
+				$destinataire = "jerome.bombal@free.fr"; // input your email here
+				$objet = "Message de Hot Coffee Jazz"; // input your domain name here
 
 				// Headers
 	      $headers = array(
@@ -32,15 +32,15 @@
 
 				// Send the message then return data to current page with ajax
 				if ($checkRobot == 7) {
-					$conf = ini_set('mail', 'mail.gmail.com'); // update yours informations here
+					$conf = ini_set('mail', 'jerome.bombal@free.fr'); // update your information here
 					$sending_ok = mail($destinataire, $objet, $texte, $headers);
 					if ($sending_ok) {
-							echo "<p class=\"hardLight\">Thanks for your message !<br /><br />We will get back to you very soon.</p>";
+							echo "<p class=\"hardLight\">Merci de votre message !<br /><br />Nous y répondrons bientôt</p>";
 						}
 					else {
-							echo "<p class=\"hardLight\">There seems to be a problem ...</p>";
+							echo "<p class=\"hardLight\">Problême inattendu rencontré...</p>";
 						}
 
 				} else {
-					echo "<p class=\"hardLight\">There seems to be a problem with the anti robot control ...</p>";
+					echo "<p class=\"hardLight\">Problême inattendu rencontré avec le contrôle anti-robot...</p>";
 				}
