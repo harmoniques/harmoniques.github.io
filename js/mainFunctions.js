@@ -65,7 +65,7 @@ window.addEventListener("load", function () {
     let divMail = document.getElementById('insertMail');
     let newAhref = document.createElement('a');
     newAhref.href = "mailto:" + name + '@' + domain;
-    // newAhref.innerHTML = name + '@' + domain;
+    newAhref.innerHTML = name + '@' + domain;
     divMail.appendChild(newAhref);
   }
 })
@@ -167,7 +167,7 @@ $(function () {
                             $('#checkRobot').val('');
                           });
             } else {
-                alert('Incorrect anti robot check result !');
+                alert('Incorrect anti-robot check result !');
             }
 
       })
@@ -225,7 +225,7 @@ $(function () {
                             $('#checkRobotNews').val('');
                           });
             } else {
-                alert('Incorrect anti robot check result !');
+                alert('Incorrect anti-robot check result !');
             }
 
       })
