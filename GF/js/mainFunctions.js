@@ -321,9 +321,9 @@ $(function () {
 })
 
 // Locations
-$(function () {
-    $(".card").on('click', () => {window.location.href = "https://www.instagram.com/jay.musique/"});
-})
+// $(function () {
+//     $(".card").on('click', () => {window.location.href = "https://www.instagram.com/jay.musique/"});
+// })
 // Location socials
 $(function () {
     $('.facebook').on('click', function(event) {
